@@ -11,6 +11,9 @@ It includes **conversational query condensation** (supporting follow-up question
 Below is the architecture diagram detailing the document upload/indexing pipeline and the multi-turn question-answering workflow:
 
 ![System Flow Diagram](system_flow.png)
+<img width="2632" height="1404" alt="image" src="https://github.com/user-attachments/assets/432cdb36-66a6-4f20-8209-eb6b68d79218" />
+<img width="946" height="914" alt="image" src="https://github.com/user-attachments/assets/b9695fb4-a0b7-4c3a-95b5-43c7fb2c5dd8" />
+
 
 ### Core Pipeline Steps:
 1. **Ingestion & Chunking:** Documents (`.pdf` or `.txt`) are loaded, parsed, and split into overlapping text chunks of 500 characters.
@@ -39,7 +42,7 @@ Ensure you have **Python 3.10+** installed on your system.
 
 ### 2. Clone the Repository
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/abhinavyy/RAG-FAQ.git
 cd FAQ_RAG
 ```
 
