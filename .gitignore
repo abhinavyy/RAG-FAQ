@@ -1,0 +1,49 @@
+# ─── Secrets & Environment ───────────────────────────────────────────────────
+.env
+.env.*
+
+# ─── Internal Planning & Dev Files ───────────────────────────────────────────
+faq_rag_antigravity_prompt.md
+implementation_plan.md
+PROJECT.md
+
+# ─── Python Cache ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ─── Virtual Environments ─────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ─── AI Model Cache (downloaded by HuggingFace/SentenceTransformers) ──────────
+.cache/
+*.bin
+*.safetensors
+
+# ─── FAISS / Vector DB files (in-memory, no need to commit) ──────────────────
+*.faiss
+*.pkl
+chroma_faq_db/
+
+# ─── Uploaded Documents (user data, never commit) ─────────────────────────────
+data/*.pdf
+data/*.txt
+data/*.docx
+
+# ─── OS & Editor Files ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
