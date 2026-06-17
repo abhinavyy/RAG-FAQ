@@ -10,7 +10,6 @@ It includes **conversational query condensation** (supporting follow-up question
 
 Below is the architecture diagram detailing the document upload/indexing pipeline and the multi-turn question-answering workflow:
 
-![System Flow Diagram](system_flow.png)
 <img width="2632" height="1404" alt="image" src="https://github.com/user-attachments/assets/432cdb36-66a6-4f20-8209-eb6b68d79218" />
 <img width="946" height="914" alt="image" src="https://github.com/user-attachments/assets/b9695fb4-a0b7-4c3a-95b5-43c7fb2c5dd8" />
 
