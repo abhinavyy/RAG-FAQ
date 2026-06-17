@@ -6,9 +6,7 @@ It includes **conversational query condensation** (supporting follow-up question
 
 ---
 
-## ⚙️ How It Works (System Flow)
-
-Below is the architecture diagram detailing the document upload/indexing pipeline and the multi-turn question-answering workflow:
+## ⚙️System Flow
 
 <img width="2632" height="1404" alt="image" src="https://github.com/user-attachments/assets/432cdb36-66a6-4f20-8209-eb6b68d79218" />
 <img width="946" height="914" alt="image" src="https://github.com/user-attachments/assets/b9695fb4-a0b7-4c3a-95b5-43c7fb2c5dd8" />
@@ -18,7 +16,6 @@ Below is the architecture diagram detailing the document upload/indexing pipelin
 1. **Ingestion & Chunking:** Documents (`.pdf` or `.txt`) are loaded, parsed, and split into overlapping text chunks of 500 characters.
 2. **Local Embeddings:** Text chunks are vectorized using the high-performance open-source embedding model `dunzhang/stella_en_400M_v5` running locally.
 3. **In-Memory Vector Database:** Vectors are indexed in an in-memory **FAISS** database using Cosine Similarity.
-4. **Conversational Rephrasing:** Follow-up questions are automatically rephrased into standalone search queries using past chat history.
 5. **Quality Filtering:** Chunks matching the query are filtered using a strict similarity cutoff score of `>= 0.35` to prevent irrelevant context from poluting the prompt.
 6. **Grounded Generation:** Valid contexts are formatted into a secure prompt and sent to the **Groq API** running `llama-3.1-8b-instant` with a temperature of `0.1` for deterministic, grounded, and citation-backed responses.
 
