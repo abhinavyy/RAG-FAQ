@@ -217,7 +217,10 @@ pre, code, pre *, code * {
 }
 """
 
-with gr.Blocks() as demo:
+with gr.Blocks(
+    theme=gr.themes.Soft(primary_hue="neutral", secondary_hue="neutral"),
+    css=custom_css
+) as demo:
     # Vector store state & QA chain state per session
     vector_store_state = gr.State(None)
     qa_chain_state = gr.State(None)
@@ -286,7 +289,5 @@ if __name__ == "__main__":
     demo.launch(
         server_name="127.0.0.1", 
         server_port=7860, 
-        share=False,
-        theme=gr.themes.Soft(primary_hue="neutral", secondary_hue="neutral"),
-        css=custom_css
+        share=False
     )
